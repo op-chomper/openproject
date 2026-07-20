@@ -10,14 +10,20 @@ export default class OpShowWhenValueSelectedController extends ApplicationContro
 
   causeTargetConnected(target:HTMLElement) {
     target.addEventListener('change', this.boundListener);
+    // Reconcile the effect targets against the current value on load, so the
+    // conditional fields render correctly without requiring the user to toggle.
+    this.applyFor(target as HTMLInputElement);
   }
 
   causeTargetDisconnected(target:HTMLElement) {
     target.removeEventListener('change', this.boundListener);
   }
 
-  private toggleDisabled(evt:InputEvent):void {
-    const input = evt.target as HTMLInputElement;
+  private toggleDisabled(evt:Event):void {
+    this.applyFor(evt.target as HTMLInputElement);
+  }
+
+  private applyFor(input:HTMLInputElement):void {
     const targetName = input.dataset.targetName;
 
     this

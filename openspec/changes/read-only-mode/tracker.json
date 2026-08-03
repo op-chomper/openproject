@@ -1,0 +1,17 @@
+{
+  "change_id": "read-only-mode",
+  "repo": "openproject",
+  "project_id": "SDT",
+  "intake": {
+    "hash": "sha256:a64fe85e23be08e66733455c0015dd64e573de2d5d93ea573374690a18cc1983",
+    "selection": [],
+    "documents": [
+      {
+        "id": 317,
+        "title": "Read-only mode for Documents",
+        "updated_at": "2026-08-02T22:07:56.784Z"
+      }
+    ]
+  },
+  "unconvertible": []
+}

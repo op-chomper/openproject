@@ -1,0 +1,22 @@
+{
+  "change_id": "read-only-mode-2",
+  "repo": "openproject",
+  "project_id": "SDT",
+  "intake": {
+    "hash": "sha256:0709972161ca2d13a48d9d06da0c20b7272134ba910a376dada187719b2d4dbd",
+    "selection": [],
+    "documents": [
+      {
+        "id": 318,
+        "title": "Longetivity",
+        "updated_at": "2026-08-02T23:36:34.316Z"
+      },
+      {
+        "id": 317,
+        "title": "Read-only mode for Documents",
+        "updated_at": "2026-08-02T22:07:56.784Z"
+      }
+    ]
+  },
+  "unconvertible": []
+}

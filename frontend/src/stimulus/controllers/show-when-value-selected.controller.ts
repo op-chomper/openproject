@@ -10,9 +10,6 @@ export default class OpShowWhenValueSelectedController extends ApplicationContro
 
   causeTargetConnected(target:HTMLElement) {
     target.addEventListener('change', this.boundListener);
-    // Reconcile the effect targets against the current value on load, so the
-    // conditional fields render correctly without requiring the user to toggle.
-    this.applyFor(target as HTMLSelectElement | HTMLInputElement);
   }
 
   causeTargetDisconnected(target:HTMLElement) {

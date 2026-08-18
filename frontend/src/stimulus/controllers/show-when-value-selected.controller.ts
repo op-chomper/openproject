@@ -16,18 +16,15 @@ export default class OpShowWhenValueSelectedController extends ApplicationContro
     target.removeEventListener('change', this.boundListener);
   }
 
-  private toggleDisabled(evt:Event):void {
-    this.applyFor(evt.target as HTMLSelectElement | HTMLInputElement);
-  }
-
-  private applyFor(cause:HTMLSelectElement | HTMLInputElement):void {
-    const targetName = cause.dataset.targetName;
+  private toggleDisabled(evt:InputEvent):void {
+    const input = evt.target as HTMLInputElement;
+    const targetName = input.dataset.targetName;
 
     this
       .effectTargets
       .filter((el) => targetName === el.dataset.targetName)
       .forEach((el) => {
-        const disabled = this.willDisable(el, cause.value);
+        const disabled = this.willDisable(el, input.value);
         el.disabled = disabled;
 
         if (el.dataset.setVisibility === 'true') {
